@@ -1,17 +1,14 @@
 import React from 'react';
-import PayStackButtonComponent from './components/PayStackButton';
+import {StripePayment, PayStack} from "./components";
 
 const App: React.FC = () => {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-            <header className="mb-8">
-                <h1 className="text-2xl font-semibold">
-                    Paystack Integration Testing (TypeScript)
-                </h1>
-            </header>
-            <section>
-                <PayStackButtonComponent />
-            </section>
+        <div style={{margin: '5% auto', width: '500px'}} className="row justify-content-center mt-lg-5">
+            <StripePayment/>
+            <br/>
+            <hr/>
+            <br/>
+            <PayStack/>
         </div>
     );
 };
